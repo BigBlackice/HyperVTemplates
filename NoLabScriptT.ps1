@@ -1,4 +1,4 @@
-#stolen template for test purposes
+#stolen template for test purposes.
 # VM Name
 $VMName          = "DC01"
 
