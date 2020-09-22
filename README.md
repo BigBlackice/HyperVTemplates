@@ -1,7 +1,7 @@
 # HyperVTemplates #
 ### deployment templates for hyper-v ###
 
-## general ##
+## General ##
 NodeName                = "vm-name";  
 Lability_ProcessorCount = nr of cores;  
 Lability_Media          = "disk-name";  
