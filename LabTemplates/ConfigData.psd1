@@ -41,7 +41,7 @@
             InterfaceAlias              = 'Ethernet';
             AddressFamily               = 'IPv4';
             Lability_Media              = 'Windows10en-us.iso';
-            Lability_ProcessorCount     = 2;
+            Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
             Lability_HardDiskDrive = @(
@@ -77,7 +77,7 @@
             InterfaceAlias              = 'Ethernet';
             AddressFamily               = 'IPv4';
             Lability_Media              = 'Windows10en-us.iso';
-            Lability_ProcessorCount     = 2;
+            Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
             Lability_HardDiskDrive = @(
