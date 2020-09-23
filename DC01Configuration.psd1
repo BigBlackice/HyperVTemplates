@@ -2,7 +2,7 @@
     AllNodes = @(
         @{
             ## oc plz no steal
-            NodeName = "DC01";
+            NodeName                    = "DC01";
             Role                        = 'SERVER';
             InterfaceAlias              = 'Ethernet';
             AddressFamily               = 'IPv4';
