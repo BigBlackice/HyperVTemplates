@@ -27,17 +27,6 @@
                 @{ Name = 'xComputerManagement';}
                 @{ Name = 'xNetworking';}
             );
-            Media = @(
-                @{
-                    Id = "pfSense";
-                    Filename = "pfSense.vhdx";
-                    Description = "pfSense 64-bit AMD/Intel VHDX file";
-                    Architecture = "x64";
-                    MediaType = "VHD";
-                    OperatingSystem = "Linux";
-                    Uri = "file://H:\Lability\MasterVirtualHardDisks\pfSense.vhdx";
-                }
-            );
         };
     };
 };
