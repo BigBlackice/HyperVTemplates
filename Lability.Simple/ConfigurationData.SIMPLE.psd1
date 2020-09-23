@@ -37,7 +37,7 @@
                     Description = 'pfSense 64-bit AMD/Intel';
                     MediaType = 'ISO';
                     ImageName = 'pfSense 64-bit';
-                    OperatingSystem = 'FreeBSD';
+                    OperatingSystem = 'Linux';
                 }
             );
         };
