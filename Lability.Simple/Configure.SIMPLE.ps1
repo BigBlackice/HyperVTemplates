@@ -3,8 +3,8 @@ Configuration SimpleConfig {
 
     Import-DscResource -Module PSDesiredStateConfiguration
 
-    Import-DscResource -Module xComputerManagement -ModuleVersion 4.1.0.0
-    Import-DscResource -Module xNetworking -ModuleVersion 5.7.0.0
+    Import-DscResource -Module xComputerManagement
+    Import-DscResource -Module xNetworking
 
     # Common configuration for all nodes
     node $AllNodes.Where({$_.Role -in 'CLIENT'}).NodeName {
