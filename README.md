@@ -1,5 +1,5 @@
 # HyperVTemplates #
-### deployment templates for hyper-v ###
+### Deployment templates for hyper-v ###
 
 ## General ##
 NodeName                = "vm-name";  
