@@ -24,8 +24,8 @@
     NonNodeData = @{
         Lability = @{
             DSCResource = @(
-                @{ Name = 'xComputerManagement'; RequiredVersion = '4.1.0.0'; }
-                @{ Name = 'xNetworking'; RequiredVersion = '5.7.0.0'; }
+                @{ Name = 'xComputerManagement';}
+                @{ Name = 'xNetworking';}
             );
             Media = @(
                 @{
