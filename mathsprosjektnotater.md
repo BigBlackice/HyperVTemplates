@@ -1,6 +1,6 @@
 # Notater til Prosjektet i Maths fag:
 
-Slette VMer lagd med lability:
+## Slette VMer lagd med lability:
 $VMName = "CLIENT1"
 Stop-VM -Name $VMName -TurnOff -Force
 Remove-VM -Name $VMName -Force
