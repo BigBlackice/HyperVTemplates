@@ -51,6 +51,25 @@
                     MaximumSizeBytes = 50GB;
                 }
                 );
+        
+        }
+        @{
+            NodeName                    = 'FREENAS1';
+            Role                        = 'FILESHARE';
+            InterfaceAlias              = 'Ethernet';
+            AddressFamily               = 'IPv4';
+            Lability_Media              = 'FreeNAS-11.3';
+            Lability_ProcessorCount     = 1;
+            Lability_StartupMemory      = 4GB;
+            PSDscAllowPlainTextPassword = $true;
+            Lability_HardDiskDrive = @(
+                @{
+                    Generation = "VHDX";
+                    Type = "Dynamic"
+                    MaximumSizeBytes = 50GB;
+                }
+                );
+
         }
         @{
             NodeName                    = 'CLIENT2';
