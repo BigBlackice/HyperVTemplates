@@ -47,5 +47,41 @@ Configuration SimpleConfig {
         }
 
     }
+    
+    node $AllNodes.Where({$_.Role -in 'ROUTER'}).NodeName {
+        LocalConfigurationManager {
+            RebootNodeIfNeeded   = $true;
+            AllowModuleOverwrite = $true;
+            ConfigurationMode    = 'ApplyOnly';
+        }
+
+        # Enable ICMP ECHO (aka ping) requests over IPv4
+        xFirewall 'FPS-ICMP4-ERQ-In' {
+            Name        = 'FPS-ICMP4-ERQ-In';
+            DisplayName = 'File and Printer Sharing (Echo Request - ICMPv4-In)';
+            Description = 'Echo request messages are sent as ping requests to other nodes.';
+            Direction   = 'Inbound';
+            Action      = 'Allow';
+            Enabled     = 'True';
+            Profile     = 'Any';
+        }
+
+        # Enable ICMP ECHO (aka ping) requests over IPv6
+        xFirewall 'FPS-ICMP6-ERQ-In' {
+            Name        = 'FPS-ICMP6-ERQ-In';
+            DisplayName = 'File and Printer Sharing (Echo Request - ICMPv6-In)';
+            Description = 'Echo request messages are sent as ping requests to other nodes.';
+            Direction   = 'Inbound';
+            Action      = 'Allow';
+            Enabled     = 'True';
+            Profile     = 'Any';
+        }
+
+        # Set the VM's hostname
+        xComputer 'Hostname' {
+            Name = $node.NodeName;
+        }
+
+    }
 
 }
