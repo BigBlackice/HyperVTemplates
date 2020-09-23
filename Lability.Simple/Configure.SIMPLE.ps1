@@ -47,8 +47,8 @@ Configuration SimpleConfig {
         }
 
     }
-    
-    node $AllNodes.Where({$_.Role -in 'ROUTER'}).NodeName {
+
+    node $AllNodes.Where({$_.Role -in 'SERVER'}).NodeName {
         LocalConfigurationManager {
             RebootNodeIfNeeded   = $true;
             AllowModuleOverwrite = $true;

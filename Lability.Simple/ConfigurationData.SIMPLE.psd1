@@ -10,16 +10,6 @@
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
         }
-        @{
-            NodeName                    = 'PFSENSE1';
-            Role                        = 'ROUTER';
-            InterfaceAlias              = 'Ethernet';
-            AddressFamily               = 'IPv4';
-            Lability_Media              = 'pfSense';
-            Lability_ProcessorCount     = 1;
-            Lability_StartupMemory      = 2GB;
-            PSDscAllowPlainTextPassword = $true;
-        }
     );
     NonNodeData = @{
         Lability = @{
