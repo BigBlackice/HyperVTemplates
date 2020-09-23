@@ -1,4 +1,4 @@
-# Notater til Prosjektet i Maths fag:
+# ProsjektNotater:
 
 ## Slette VMer lagd med lability:
  Se [DeleteVM.ps1](Lability.Simple/DeleteVM.ps1).  
