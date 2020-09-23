@@ -1,9 +1,6 @@
 # Notater til Prosjektet i Maths fag:
 
 ## Slette VMer lagd med lability:
-$VMName = "CLIENT1"
-Stop-VM -Name $VMName -TurnOff -Force
-Remove-VM -Name $VMName -Force
-Remove-Item -Path "${env:LabilityDifferencingVhdPath}\${VMName}*" -ErrorAction SilentlyContinue -Force
+ Se [DeleteVM.ps1](HyperVTemplatesLability\Lability.Simple).  
 
 Sletter alle VM'er og tilsvarende disker den finner i Lability sin VMVirtualHardDisks mappe.
