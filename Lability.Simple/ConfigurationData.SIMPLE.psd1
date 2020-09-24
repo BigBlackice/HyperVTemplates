@@ -6,10 +6,10 @@
             InterfaceAlias              = 'Ethernet';
             SecondaryInterfaceAlias     = 'Ethernet 2';
             AddressFamily               = 'IPv4';
-            Lability_SwitchName         = 'Default Switch','InternalTest';
-            Lability_Media              = 'WIN10_x64_Enterprise_EN_Eval';
-            Lability_ProcessorCount     = 2;
-            Lability_StartupMemory      = 4GB;
+            SwitchName                  = 'Default Switch','InternalTest';
+            Media                       = 'arcolinux-v20.7.5';
+            ProcessorCount              = 2;
+            StartupMemory               = 4GB;
             PSDscAllowPlainTextPassword = $true;
         }
     );
@@ -21,6 +21,18 @@
             );
             Network = @(
                 @{ Name = 'InternalTest'; Type = 'Internal' }
+            );
+            Media = @(
+                @{
+                    Id = 'arcolinux-v20.7.5';
+                    Filename = 'Test';
+                    Architecture = 'x64';
+                    Uri = 'Test';
+                    #Checksum = ''; file://E:\ISOs\arcolinux-v20.7.5.iso
+                    Description = 'Test';
+                    MediaType = 'NULL';
+                    OperatingSystem = 'Linux';
+                }
             );
         };
     };
