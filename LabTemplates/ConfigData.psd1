@@ -18,13 +18,13 @@
             }
             );
         }
-         @{
+        @{
             NodeName                    = 'PFSENSE1';
             Role                        = 'ROUTER';
             InterfaceAlias              = 'Ethernet';
             SecondaryInterfaceAlias     = 'Ethernet 2';
             AddressFamily               = 'IPv4';
-            #Lability_Media              = 'pfSense-2.4.5-amd64';
+            Lability_Media              = 'pfSense-2.4.5-amd64';
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 2GB;
             PSDscAllowPlainTextPassword = $true;
@@ -56,12 +56,12 @@
                 );
         
         }
-         @{
+        @{
             NodeName                    = 'FREENAS1';
             Role                        = 'FILESHARE';
             InterfaceAlias              = 'Ethernet';
             AddressFamily               = 'IPv4';
-            #Lability_Media              = 'FreeNAS-11.3';
+            Lability_Media              = 'FreeNAS-11.3';
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
@@ -108,7 +108,7 @@
                     Id = 'windows_server';
                     Filename = 'en_windows_server_2019_09.iso';
                     Architecture = 'x64';
-                    Uri = 'file://C:\Lability\ISOs\en_windows_server_2019_09.iso';
+                    Uri = 'file://D:\Lability\ISOs\en_windows_server_2019_09.iso';
                     Checksum = '';
                     Description = 'w2019 64bit server';
                     MediaType = 'ISO';
