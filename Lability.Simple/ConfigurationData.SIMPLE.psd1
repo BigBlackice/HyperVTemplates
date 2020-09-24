@@ -11,7 +11,12 @@
             ProcessorCount              = 2;
             StartupMemory               = 4GB;
             PSDscAllowPlainTextPassword = $true;
-        }
+            Lability_DvdDrive   = @{
+                ControllerNumber   = 0;
+                ControllerLocation = 1;
+                Path = 'E:\ISOs\arcolinux-v20.7.5.iso';
+            }
+        };
     );
     NonNodeData = @{
         Lability = @{
@@ -27,8 +32,8 @@
                     Id = 'arcolinux-v20.7.5';
                     Filename = 'Test';
                     Architecture = 'x64';
-                    Uri = 'Test';
-                    #Checksum = ''; file://E:\ISOs\arcolinux-v20.7.5.iso
+                    Uri = 'Test'; # file://E:\ISOs\arcolinux-v20.7.5.iso
+                    #Checksum = '';
                     Description = 'Test';
                     MediaType = 'NULL';
                     OperatingSystem = 'Linux';
