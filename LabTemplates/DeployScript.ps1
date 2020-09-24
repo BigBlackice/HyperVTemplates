@@ -14,4 +14,3 @@ Import-Module -Name Lability
 & $DscConfigName -ConfigurationData $ConfigurationData -OutputPath $env:LabilityConfigurationPath -Verbose
 Start-LabConfiguration -ConfigurationData $ConfigurationData -Path $env:LabilityConfigurationPath -Verbose -Password $AdminPassword -IgnorePendingReboot:$IgnorePendingReboot
 Start-Lab -ConfigurationData $ConfigurationData -Verbose
-Set-VMDvdDrive -vmname  "PFSENSE1" -Path "C:\Lability\ISOs\pfSense-CE-2.4.5-RELEASE-amd64.iso";
