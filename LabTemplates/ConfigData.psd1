@@ -9,7 +9,7 @@
             Lability_ProcessorCount     = 2;
             Lability_StartupMemory      = 2GB;
             Lability_Media              = "en_windows_server_2019_09";
-            
+            Lability_SwitchName = 'Internal';
             Lability_HardDiskDrive = @(
             @{
                 Generation = "VHDX";
@@ -22,11 +22,13 @@
             NodeName                    = 'PFSENSE1';
             Role                        = 'ROUTER';
             InterfaceAlias              = 'Ethernet';
+            SecondaryInterfaceAlias     = 'Ethernet 2';
             AddressFamily               = 'IPv4';
             Lability_Media              = 'pfSense-2.4.5-amd64';
             #Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 2GB;
             PSDscAllowPlainTextPassword = $true;
+            Lability_SwitchName = 'Default Switch',  'Internal';
             Lability_HardDiskDrive = @(
                 @{
                     Generation = "VHDX";
@@ -44,6 +46,7 @@
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
+            Lability_SwitchName = 'Internal';
             Lability_HardDiskDrive = @(
                 @{
                     Generation = "VHDX";
@@ -62,6 +65,7 @@
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
+            Lability_SwitchName = 'Internal';
             Lability_HardDiskDrive = @(
                 @{
                     Generation = "VHDX";
@@ -80,6 +84,7 @@
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
+            Lability_SwitchName = 'Default Switch';
             Lability_HardDiskDrive = @(
                 @{
                     Generation = "VHDX";
@@ -94,6 +99,9 @@
             DSCResource = @(
                 @{ Name = 'xComputerManagement';}
                 @{ Name = 'xNetworking';}
+            );
+            Network = @(
+                @{ Name = 'Internal'; Type = 'Internal'; }
             );
             
         };
