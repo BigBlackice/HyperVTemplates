@@ -85,23 +85,3 @@ Configuration SimpleConfig {
     }
 
 }
-
-Configuration SimpleDelete {
-    param ()
-
-    Import-DscResource -Module PSDesiredStateConfiguration
-
-    Import-DscResource -Module xComputerManagement
-    Import-DscResource -Module xNetworking
-
-    # Common configuration for all nodes
-    node $AllNodes.Where({$_.Role -in '*'}).NodeName {
-        # Nodes to delete
-        $VMName = $node.NodeName
-        Stop-VM -Name $VMName -TurnOff -Force -ErrorAction SilentlyContinue
-        Remove-VM -Name $VMName -Force
-        Remove-Item -Path "${env:LabilityDifferencingVhdPath}\${VMName}*" -ErrorAction SilentlyContinue -Force
-
-    }
-
-}
