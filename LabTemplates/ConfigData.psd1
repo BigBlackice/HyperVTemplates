@@ -1,24 +1,24 @@
 @{
     AllNodes = @(
-       # @{
-        #    ## oc plz no steal
-         #   NodeName                    = 'DC01';
-          #  Role                        = 'SERVER';
-           # InterfaceAlias              = 'Ethernet';
-            #AddressFamily               = 'IPv4';
-            #Lability_ProcessorCount     = 2;
-            #Lability_StartupMemory      = 2GB;
-            #Lability_Media              = 'windows_server';
-            #Lability_SwitchName = 'Internal';
-            #Lability_HardDiskDrive = @(
-            #@{
-            #    Generation = 'VHDX';
-            #    Type = 'Dynamic'
-            #    MaximumSizeBytes = 80GB;
-            #}
-            #);
-        #}
-<#         @{
+        @{
+            ## oc plz no steal
+            NodeName                    = 'DC01';
+            Role                        = 'SERVER';
+            InterfaceAlias              = 'Ethernet';
+            AddressFamily               = 'IPv4';
+            Lability_ProcessorCount     = 2;
+            Lability_StartupMemory      = 2GB;
+            Lability_Media              = 'windows_server';
+            Lability_SwitchName = 'Internal';
+            Lability_HardDiskDrive = @(
+            @{
+                Generation = 'VHDX';
+                Type = 'Dynamic'
+                MaximumSizeBytes = 80GB;
+            }
+            );
+        }
+         @{
             NodeName                    = 'PFSENSE1';
             Role                        = 'ROUTER';
             InterfaceAlias              = 'Ethernet';
@@ -36,7 +36,7 @@
                     MaximumSizeBytes = 10GB;
                 }
                 );
-        } #>
+        } 
         @{
             NodeName                    = 'CLIENT1';
             Role                        = 'CLIENT';
@@ -56,7 +56,7 @@
                 );
         
         }
-<#         @{
+         @{
             NodeName                    = 'FREENAS1';
             Role                        = 'FILESHARE';
             InterfaceAlias              = 'Ethernet';
@@ -74,7 +74,7 @@
                 }
                 );
 
-        } #>
+        } 
         @{
             NodeName                    = 'CLIENT2';
             Role                        = 'CLIENT';
