@@ -1,31 +1,31 @@
 @{
     AllNodes = @(
-        @{
-            ## oc plz no steal
-            NodeName                    = "DC01";
-            Role                        = 'SERVER';
-            InterfaceAlias              = 'Ethernet';
-            AddressFamily               = 'IPv4';
-            Lability_ProcessorCount     = 2;
-            Lability_StartupMemory      = 2GB;
-            Lability_Media              = "en_windows_server_2019_09";
-            Lability_SwitchName = 'Internal';
-            Lability_HardDiskDrive = @(
-            @{
-                Generation = "VHDX";
-                Type = "Dynamic"
-                MaximumSizeBytes = 80GB;
-            }
-            );
-        }
-        @{
+       # @{
+        #    ## oc plz no steal
+         #   NodeName                    = 'DC01';
+          #  Role                        = 'SERVER';
+           # InterfaceAlias              = 'Ethernet';
+            #AddressFamily               = 'IPv4';
+            #Lability_ProcessorCount     = 2;
+            #Lability_StartupMemory      = 2GB;
+            #Lability_Media              = 'windows_server';
+            #Lability_SwitchName = 'Internal';
+            #Lability_HardDiskDrive = @(
+            #@{
+            #    Generation = 'VHDX';
+            #    Type = 'Dynamic'
+            #    MaximumSizeBytes = 80GB;
+            #}
+            #);
+        #}
+<#         @{
             NodeName                    = 'PFSENSE1';
             Role                        = 'ROUTER';
             InterfaceAlias              = 'Ethernet';
             SecondaryInterfaceAlias     = 'Ethernet 2';
             AddressFamily               = 'IPv4';
-            Lability_Media              = 'pfSense-2.4.5-amd64';
-            #Lability_ProcessorCount     = 1;
+            #Lability_Media              = 'pfSense-2.4.5-amd64';
+            Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 2GB;
             PSDscAllowPlainTextPassword = $true;
             Lability_SwitchName = 'Default Switch',  'Internal';
@@ -36,13 +36,13 @@
                     MaximumSizeBytes = 10GB;
                 }
                 );
-        }
+        } #>
         @{
             NodeName                    = 'CLIENT1';
             Role                        = 'CLIENT';
             InterfaceAlias              = 'Ethernet';
             AddressFamily               = 'IPv4';
-            Lability_Media              = 'Windows10en-us.iso';
+            Lability_Media              = 'Windows10en-us';
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
@@ -56,7 +56,7 @@
                 );
         
         }
-        @{
+<#         @{
             NodeName                    = 'FREENAS1';
             Role                        = 'FILESHARE';
             InterfaceAlias              = 'Ethernet';
@@ -74,13 +74,13 @@
                 }
                 );
 
-        }
+        } #>
         @{
             NodeName                    = 'CLIENT2';
             Role                        = 'CLIENT';
             InterfaceAlias              = 'Ethernet';
             AddressFamily               = 'IPv4';
-            Lability_Media              = 'Windows10en-us.iso';
+            Lability_Media              = 'Windows10en-us';
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
@@ -103,29 +103,30 @@
             Network = @(
                 @{ Name = 'Internal'; Type = 'Internal'; }
             );
-            Media = @(
+            Lability_Media = @(
                 @{
-                    Id = 'en_windows_server_2019_09';
+                    Id = 'windows_server';
                     Filename = 'en_windows_server_2019_09.iso';
                     Architecture = 'x64';
                     Uri = 'file://C:\Lability\ISOs\en_windows_server_2019_09.iso';
                     Checksum = '';
                     Description = 'w2019 64bit server';
                     MediaType = 'ISO';
+                    ImageName = '2';
                     OperatingSystem = 'Windows';
                 }
                 @{
-                    Id = 'Windows10en-us.iso';
-                    Filename = 'Windows10en-us.iso.iso';
+                    Id = 'Windows10en-us';
+                    Filename = 'Windows10en-us.iso';
                     Architecture = 'x64';
-                    Uri = 'file://C:\Lability\ISOs\Windows10en-us.iso.iso';
+                    Uri = 'file://D:\Lability\ISOs\Windows10en-us.iso';
                     Checksum = '';
                     Description = 'w10 amd/intel';
                     MediaType = 'ISO';
-                    ImageName = 'w10 64bit';
+                    ImageName = 'W10';
                     OperatingSystem = 'Windows';
 
-                };
+                }
             );
         };
     };
