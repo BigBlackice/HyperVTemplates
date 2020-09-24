@@ -81,6 +81,7 @@ Configuration TemplateConfig {
         xComputer 'Hostname' {
             Name = $node.NodeName;
         }
+        Set-VMDvdDrive -vmname  "PFSENSE1" -Path "C:\Lability\ISOs\pfSense-CE-2.4.5-RELEASE-amd64.iso";
 
     }
 
