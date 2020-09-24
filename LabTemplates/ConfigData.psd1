@@ -103,7 +103,30 @@
             Network = @(
                 @{ Name = 'Internal'; Type = 'Internal'; }
             );
-            
+            Media = @(
+                @{
+                    Id = 'en_windows_server_2019_09';
+                    Filename = 'en_windows_server_2019_09.iso';
+                    Architecture = 'x64';
+                    Uri = 'file://C:\Lability\ISOs\en_windows_server_2019_09.iso';
+                    Checksum = '';
+                    Description = 'w2019 64bit server';
+                    MediaType = 'ISO';
+                    OperatingSystem = 'Windows';
+                }
+                @{
+                    Id = 'Windows10en-us.iso';
+                    Filename = 'Windows10en-us.iso.iso';
+                    Architecture = 'x64';
+                    Uri = 'file://C:\Lability\ISOs\Windows10en-us.iso.iso';
+                    Checksum = '';
+                    Description = 'w10 amd/intel';
+                    MediaType = 'ISO';
+                    ImageName = 'w10 64bit';
+                    OperatingSystem = 'Windows';
+
+                }
+            );
         };
     };
 };
