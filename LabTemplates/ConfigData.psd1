@@ -94,7 +94,7 @@
                 );
         }
     );
-    NoneNodeData = @{
+    NonNodeData = @{
         Lability = @{
             DSCResource = @(
                 @{ Name = 'xComputerManagement';}
@@ -103,7 +103,7 @@
             Network = @(
                 @{ Name = 'Internal'; Type = 'Internal'; }
             );
-            Lability_Media = @(
+            Media = @(
                 @{
                     Id = 'windows_server';
                     Filename = 'en_windows_server_2019_09.iso';
