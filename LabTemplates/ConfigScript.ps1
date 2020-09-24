@@ -7,7 +7,7 @@ Configuration TemplateConfig {
     Import-DscResource -Module xNetworking
 
     # Common configuration for all nodes
-    node $AllNodes.Where({$_.Role -in 'CLIENT'}).NodeName {
+    node $AllNodes.Where({$_.Role -in 'CLIENT','SERVER'}).NodeName {
 
         # Configure the DSC LocalConfigurationManager (LCM)
         # In general, Lability configs will use an LCM section like this
@@ -48,7 +48,7 @@ Configuration TemplateConfig {
 
     }
     
-    node $AllNodes.Where({$_.Role -in 'ROUTER'}).NodeName {
+    node $AllNodes.Where({$_.Role -in 'ROUTER','FILESHARE'}).NodeName {
         LocalConfigurationManager {
             RebootNodeIfNeeded   = $true;
             AllowModuleOverwrite = $true;

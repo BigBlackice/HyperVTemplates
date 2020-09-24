@@ -125,7 +125,7 @@
                     ImageName = 'w10 64bit';
                     OperatingSystem = 'Windows';
 
-                }
+                };
             );
         };
     };
