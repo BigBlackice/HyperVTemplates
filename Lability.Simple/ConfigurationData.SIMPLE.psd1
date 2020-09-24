@@ -20,6 +20,7 @@
     );
     NonNodeData = @{
         Lability = @{
+            EnvironmentPrefix = 'LAB-';
             DSCResource = @(
                 @{ Name = 'xComputerManagement';}
                 @{ Name = 'xNetworking';}
