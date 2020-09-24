@@ -1,6 +1,6 @@
 @{
     AllNodes = @(
-        @{
+       <#  @{
             ## oc plz no steal
             NodeName                    = 'DC01';
             Role                        = 'SERVER';
@@ -74,7 +74,7 @@
                 }
                 );
 
-        } 
+        } #> 
         @{
             NodeName                    = 'CLIENT2';
             Role                        = 'CLIENT';
@@ -89,7 +89,7 @@
                 @{
                     Generation = "VHDX";
                     Type = "Dynamic"
-                    MaximumSizeBytes = 50GB;
+                    MaximumSizeBytes = 60GB;
                 }
                 );
         }
@@ -123,7 +123,7 @@
                     Checksum = '';
                     Description = 'w10 amd/intel';
                     MediaType = 'ISO';
-                    ImageName = 'W10';
+                    ImageName = '2';
                     OperatingSystem = 'Windows';
 
                 }
