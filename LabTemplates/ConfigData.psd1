@@ -28,7 +28,12 @@
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 2GB;
             PSDscAllowPlainTextPassword = $true;
-            Lability_SwitchName = 'Default Switch',  'Internal';
+            Lability_SwitchName         = 'Default Switch',  'Internal';
+            Lability_DvdDrive           = @{
+                ControllerNumber        = 0;
+                ControllerLocation      = 1;
+                Path                    = 'D:\Lability\ISOs\pfSense-CE-2.4.5-RELEASE-amd64.iso';
+            }
             Lability_HardDiskDrive = @(
                 @{
                     Generation = "VHDX";
@@ -66,6 +71,11 @@
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
             Lability_SwitchName = 'Internal';
+            Lability_DvdDrive           = @{
+                ControllerNumber        = 0;
+                ControllerLocation      = 1;
+                Path                    = 'D:\Lability\ISOs\FreeNAS-11.3-U4.1.iso';
+            }
             Lability_HardDiskDrive = @(
                 @{
                     Generation = "VHDX";
@@ -127,6 +137,34 @@
                     ImageName = '2';
                     OperatingSystem = 'Windows';
 
+                }
+                @{
+                    Id = 'pfSense-2.4.5-amd64';
+                    Filename = 'Test';
+                    Architecture = 'x64';
+                    Uri = 'Test'; # D:\Lability\ISOs\pfSense-CE-2.4.5-RELEASE-amd64.iso
+                    #Checksum = '';
+                    Description = 'Test';
+                    MediaType = 'NULL';
+                    OperatingSystem = 'Linux';
+                    CustomData = @{
+                        PartitionStyle = 'MBR';
+		                VmGeneration = 1;
+                    }
+                }
+                @{
+                    Id = 'FreeNAS-11.3';
+                    Filename = 'Test';
+                    Architecture = 'x64';
+                    Uri = 'Test'; # D:\Lability\ISOs\FreeNAS-11.3-U4.1.iso
+                    #Checksum = '';
+                    Description = 'Test';
+                    MediaType = 'NULL';
+                    OperatingSystem = 'Linux';
+                    CustomData = @{
+                        PartitionStyle = 'MBR';
+		                VmGeneration = 1;
+                    }
                 }
             );
         };
