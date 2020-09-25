@@ -7,15 +7,15 @@
             SecondaryInterfaceAlias     = 'Ethernet 2';
             AddressFamily               = 'IPv4';
             SwitchName                  = 'Default Switch','InternalTest';
-            Media                       = 'WindowsTest';
+            Media                       = 'arcolinux';
             ProcessorCount              = 2;
             StartupMemory               = 4GB;
             PSDscAllowPlainTextPassword = $true;
-<#             Lability_DvdDrive   = @{
-                ControllerNumber   = 0;
-                ControllerLocation = 1;
-                Path = 'E:\ISOs\arcolinux-v20.7.5.iso';
-            } #>
+            Lability_DvdDrive           = @{
+                ControllerNumber        = 0;
+                ControllerLocation      = 1;
+                Path                    = 'E:\ISOs\pfSense-CE-2.4.5-RELEASE-p1-amd64.iso';
+            }
         };
     );
     NonNodeData = @{
@@ -30,7 +30,7 @@
             );
             Media = @(
                 @{
-                    Id = 'arcolinux-v20.7.5';
+                    Id = 'arcolinux';
                     Filename = 'Test';
                     Architecture = 'x64';
                     Uri = 'Test'; # file://E:\ISOs\arcolinux-v20.7.5.iso
@@ -38,6 +38,10 @@
                     Description = 'Test';
                     MediaType = 'NULL';
                     OperatingSystem = 'Linux';
+                    CustomData = @{
+                        PartitionStyle = 'MBR';
+		                VmGeneration = 1;
+                    }
                 }
                 @{
                     Id = 'WindowsTest';
