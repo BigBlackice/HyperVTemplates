@@ -1,6 +1,6 @@
 @{
     AllNodes = @(
-       <#  @{
+      @{
             ## oc plz no steal
             NodeName                    = 'DC01';
             Role                        = 'SERVER';
@@ -74,7 +74,7 @@
                 }
                 );
 
-        } #> 
+        }
         @{
             NodeName                    = 'CLIENT2';
             Role                        = 'CLIENT';
@@ -96,6 +96,7 @@
     );
     NonNodeData = @{
         Lability = @{
+            EnvironmentPrefix = 'LAB-';
             DSCResource = @(
                 @{ Name = 'xComputerManagement';}
                 @{ Name = 'xNetworking';}
