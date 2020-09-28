@@ -26,3 +26,12 @@ CustomData              = Custom attributes you can set on the media.
 * PartitionStyle        = 'MBR/GPT(?)'  
 * VmGeneration          = 1/2  
 
+
+
+## Modules:
+* xComputerManagement: https://github.com/PowerShell/xComputerManagement
+* xNetworking:         https://github.com/PowerShell/xNetworking
+* xActiveDirectory:    https://github.com/PowerShell/xActiveDirectory
+* xSmbShare:           https://github.com/PowerShell/xSmbShare
+* xDhcpServer:         https://github.com/PowerShell/xDhcpServer
+* xDnsServer:          https://github.com/PowerShell/xDnsServer
