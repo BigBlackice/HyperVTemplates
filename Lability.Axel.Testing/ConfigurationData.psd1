@@ -1,29 +1,36 @@
 @{
     AllNodes = @(
         @{
-            NodeName                    = 'CLIENT1';
-            Role                        = 'CLIENT';
+            NodeName                    = 'DC1';
+            Role                        = 'SERVER';
             InterfaceAlias              = 'Ethernet';
             SecondaryInterfaceAlias     = 'Ethernet 2';
             AddressFamily               = 'IPv4';
             SwitchName                  = 'Default Switch','InternalTest';
-            Media                       = 'arcolinux';
+            Media                       = 'WindowsTest';
             ProcessorCount              = 2;
             StartupMemory               = 4GB;
             PSDscAllowPlainTextPassword = $true;
-            Lability_DvdDrive           = @{
+            DomainName                  = 'test.com';
+            IPAddress                   = '10.0.0.1';
+            DnsServerAddress            = '127.0.0.1';
+<#             Lability_DvdDrive           = @{
                 ControllerNumber        = 0;
                 ControllerLocation      = 1;
                 Path                    = 'E:\ISOs\pfSense-CE-2.4.5-RELEASE-p1-amd64.iso';
-            }
+            } #>
         };
     );
     NonNodeData = @{
         Lability = @{
             EnvironmentPrefix = 'LAB-';
             DSCResource = @(
-                @{ Name = 'xComputerManagement';}
+                @{ Name = 'xComputerManagement'; }
+                @{ Name = 'xSmbShare';}
                 @{ Name = 'xNetworking';}
+                @{ Name = 'xActiveDirectory';}
+                @{ Name = 'xDnsServer';}
+                @{ Name = 'xDhcpServer';}
             );
             Network = @(
                 @{ Name = 'InternalTest'; Type = 'Internal' }
