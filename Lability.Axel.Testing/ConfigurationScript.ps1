@@ -102,6 +102,7 @@ Configuration SimpleConfig {
 
         ## Hack to fix DependsOn with hypens "bug" :(
             foreach ($feature in @(
+                'RSAT',
                 'AD-Domain-Services',
                 'GPMC',
                 'RSAT-AD-Tools',
