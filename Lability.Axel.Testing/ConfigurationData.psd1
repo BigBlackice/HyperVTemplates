@@ -6,7 +6,7 @@
             InterfaceAlias              = 'Ethernet';
             SecondaryInterfaceAlias     = 'Ethernet 2';
             AddressFamily               = 'IPv4';
-            SwitchName                  = 'Default Switch','InternalTest';
+            SwitchName                  = 'External','Default Switch';
             Media                       = 'WindowsTest';
             ProcessorCount              = 2;
             StartupMemory               = 4GB;
@@ -31,9 +31,6 @@
                 @{ Name = 'xActiveDirectory';}
                 @{ Name = 'xDnsServer';}
                 @{ Name = 'xDhcpServer';}
-            );
-            Network = @(
-                @{ Name = 'InternalTest'; Type = 'Internal' }
             );
             Media = @(
                 @{
