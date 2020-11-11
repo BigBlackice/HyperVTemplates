@@ -51,11 +51,11 @@
             Role                        = 'CLIENT';
             InterfaceAlias              = 'Ethernet';
             AddressFamily               = 'IPv4';
-            Lability_Media              = 'Windows10en-us';
-            Lability_ProcessorCount     = 1;
+            Lability_Media              = 'Windows10en_us';
+            Lability_ProcessorCount     = 2;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
-            Lability_SwitchName = 'Internal';
+            Lability_SwitchName         = 'Internal';
             Lability_HardDiskDrive = @(
                 @{
                     Generation = "VHDX";
@@ -94,7 +94,7 @@
             Role                        = 'CLIENT';
             InterfaceAlias              = 'Ethernet';
             AddressFamily               = 'IPv4';
-            Lability_Media              = 'Windows10en-us';
+            Lability_Media              = 'Windows10en_us';
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
             PSDscAllowPlainTextPassword = $true;
@@ -135,7 +135,7 @@
                     OperatingSystem = 'Windows';
                 }
                 @{
-                    Id = 'Windows10en-us';
+                    Id = 'Windows10en_us';
                     Filename = 'Windows10en-us.iso';
                     Architecture = 'x64';
                     Uri = 'file://D:\Lability\ISOs\Windows10en-us.iso';
