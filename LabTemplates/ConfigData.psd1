@@ -11,7 +11,7 @@
             Lability_Media              = 'windows_server';
             Lability_SwitchName         = 'Internal';
             PSDscAllowPlainTextPassword = $true;
-            DomainName                  = 'kcc.local';
+            DomainName                  = 'kcc.com';
             IPAddress                   = '10.0.0.1';
             DnsServerAddress            = '127.0.0.1';
             Lability_HardDiskDrive = @(
