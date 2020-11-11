@@ -54,7 +54,6 @@
             Lability_Media              = 'Windows10en-us';
             Lability_ProcessorCount     = 1;
             Lability_StartupMemory      = 4GB;
-            IPAddress                   = '10.0.0.2';
             PSDscAllowPlainTextPassword = $true;
             Lability_SwitchName = 'Internal';
             Lability_HardDiskDrive = @(
