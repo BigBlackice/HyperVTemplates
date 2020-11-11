@@ -181,19 +181,19 @@ Configuration SimpleConfig {
             DependsOn        = '[xADUser]User1';
         }
 
-        xDnsServerPrimaryZone 'test_com' {
+        xDnsServerPrimaryZone 'kcc_com' {
 
-            Name      = 'test.com';
+            Name      = 'kcc.com';
             DependsOn = '[WindowsFeature]DNS';
         }
 
-        xDnsRecord 'DC01_test_com' {
+        xDnsRecord 'DC01_kcc_com' {
 
             Name      = 'DC01';
             Target    = '10.0.0.1';
-            Zone      = 'test.com';
+            Zone      = 'kcc.com';
             Type      = 'ARecord';
-            DependsOn = '[xDnsServerPrimaryZone]test_com';
+            DependsOn = '[xDnsServerPrimaryZone]kcc_com';
         }
     }
 
