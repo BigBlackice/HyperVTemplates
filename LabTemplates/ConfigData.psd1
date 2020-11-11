@@ -9,7 +9,11 @@
             Lability_ProcessorCount     = 2;
             Lability_StartupMemory      = 2GB;
             Lability_Media              = 'windows_server';
-            Lability_SwitchName = 'Internal';
+            Lability_SwitchName         = 'Internal';
+            PSDscAllowPlainTextPassword = $true;
+            DomainName                  = 'kcc.local';
+            IPAddress                   = '10.0.0.1';
+            DnsServerAddress            = '127.0.0.1';
             Lability_HardDiskDrive = @(
             @{
                 Generation = 'VHDX';
@@ -108,8 +112,12 @@
         Lability = @{
             EnvironmentPrefix = 'LAB-';
             DSCResource = @(
-                @{ Name = 'xComputerManagement';}
+                @{ Name = 'xComputerManagement'; }
+                @{ Name = 'xSmbShare';}
                 @{ Name = 'xNetworking';}
+                @{ Name = 'xActiveDirectory';}
+                @{ Name = 'xDnsServer';}
+                @{ Name = 'xDhcpServer';}
             );
             Network = @(
                 @{ Name = 'Internal'; Type = 'Internal'; }
