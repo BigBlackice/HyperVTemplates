@@ -1,7 +1,7 @@
 [CmdletBinding()] Param(
     [SecureString] $AdminPassword = (Read-Host -AsSecureString -Prompt "Admin password"),
-    [string] $ConfigurationData = (Join-Path -Path $PSScriptRoot -ChildPath ConfigData.psd1),
-    [string] $ConfigureScript = (Join-Path -Path $PSScriptRoot -ChildPath ConfigScript.ps1),
+    [string] $ConfigurationData = (Join-Path -Path $PSScriptRoot -ChildPath "ConfigData.psd1"),
+    [string] $ConfigureScript = (Join-Path -Path $PSScriptRoot -ChildPath "ConfigScript.ps1"),
     [string] $DscConfigName = "TemplateConfig",
     [switch] $IgnorePendingReboot
 )

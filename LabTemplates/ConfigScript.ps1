@@ -1,4 +1,4 @@
-Configuration SimpleConfig {
+Configuration TemplateConfig {
     param (
         # Defining the credentials used for the Domain admin.
         [Parameter()] [ValidateNotNull()] [PSCredential] $Credential = (Get-Credential -Credential 'Administrator')
