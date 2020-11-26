@@ -149,7 +149,7 @@ Configuration TemplateConfig {
         xDhcpServerOption 'DhcpScope10_0_0_0_Option' {
 
             ScopeID            = '10.0.0.0';
-            DnsDomain          = 'test.com';
+            DnsDomain          = 'kcc.com';
             DnsServerIPAddress = '10.0.0.1';
             Router             = '10.0.0.1';
             AddressFamily      = 'IPv4';
