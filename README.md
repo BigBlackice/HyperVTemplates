@@ -1,6 +1,8 @@
 # Hyper-V Templates
 ### Lability deployment templates for Hyper-V
 
+### note, contains custom images, and customized for a specific environment.
+
 ## General
 NodeName                = The name of the VM.  
 Lability_ProcessorCount = number of cores.  
